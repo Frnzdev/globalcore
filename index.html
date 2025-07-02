@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Core</title>
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <link rel="icon" href="./assests/images/globalfav.png" type="image/png" />
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <img
+          src="./assests/images/globalEntRemovebg.png"
+          alt="Logo Global Core"
+          id="logo"
+        />
+        <nav>
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="md-hidden">
+          <button id="menu-toggle" aria-label="Abrir menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" aria-label="Menu móvel">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </header>
+
+    <section id="inicio">
+      <h1>Bem-vindo à Global Core</h1>
+      <button
+        id="btn-fs"
+        onclick="document.getElementById('servicos').scrollIntoView({ behavior: 'smooth' })"
+      >
+        Conheça nossos serviços
+      </button>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços Oferecidos</h2>
+      <p>Serviços oferecidos por nós da Global Core:</p>
+
+      <div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+          </svg>
+          <h4>Desenvolvimento Web</h4>
+          <p>Criamos sites modernos e funcionais para a sua empresa.</p>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <rect
+              x="7"
+              y="2"
+              width="10"
+              height="20"
+              rx="2"
+              ry="2"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+            />
+            <path
+              d="M11 18h2"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <h4>Aplicativos Mobile</h4>
+          <p>Desenvolvimento de apps para Android e iOS.</p>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 15a4 4 0 018-3.5 5 5 0 019 3.5"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3 15v1a4 4 0 004 4h9a4 4 0 004-4v-1"
+              stroke="#000"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h4>Soluções em Nuvem</h4>
+          <p>Infraestrutura confiável para suportar seu crescimento.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre a Global Core</h2>
+      <p>
+        Nós somos a Global Core e oferecemos soluções que cruzam fronteiras,
+        conectando pessoas, ideias e tecnologias. Atuamos com inovação e foco em
+        resultados, sempre prontos para transformar desafios em oportunidades no
+        cenário global.<br /><br />
+        Como parte desse propósito, criamos a plataforma,
+        <strong>L.A.R – Lugar de Acolhimento e Recomeço</strong>, um espaço
+        dedicado a acolher imigrantes recém-chegados ao Brasil, oferecendo apoio
+        essencial para enfrentar os desafios do dia a dia e recomeçar com
+        dignidade e segurança.
+      </p>
+
+      <div>
+        <div>
+          <img src="./assests/images/ana.jpg" alt="Ana Luiza Bertarelli" />
+          <h4>Ana Luiza Bertarelli</h4>
+          <p class="font-medium">Líder - App Designer</p>
+          <p>Especialista em soluções web e mobile.</p>
+        </div>
+
+        <div>
+          <img src="./assests/images/felipe.jpeg" alt="Felipe Fornazeiro" />
+          <h4>Felipe Fornazeiro</h4>
+          <p class="font-medium">Desenvolvedor Full Stack</p>
+          <p>Especialista em soluções web/mobile.</p>
+        </div>
+
+        <div>
+          <img src="./assests/images/michelly.jpg" alt="Michelly Moreira" />
+          <h4>Michelly</h4>
+          <p class="font-medium">Designer de usuários</p>
+          <p>Especialista UX e UI.</p>
+        </div>
+
+        <div>
+          <img src="./assests/images/samyra.jpg" alt="Samyra Alves" />
+          <h4>Samyra Alves</h4>
+          <p class="font-medium">Product Manager</p>
+          <p>Experiente em gestão de produtos e inovação.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+
+      <div>
+        <form>
+          <div>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" id="enviar-msg">Enviar</button>
+        </form>
+
+        <div>
+          <h3>Fale com a gente</h3>
+          <p>
+            Entre em contato com a equipe da Global Core para tirar dúvidas,
+            propor parcerias ou agendar uma conversa. Estamos prontos para ouvir
+            você.
+          </p>
+          <div>
+            <p><strong>Email:</strong> contato@globalcore.com</p>
+            <p><strong>Telefone:</strong> (11) 99999-9999</p>
+            <p><strong>Endereço:</strong> São Paulo - SP</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="modal-unsucess"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-desc"
+    >
+      <div>
+        <h2 id="modal-title">Mensagem não enviada.</h2>
+        <p id="modal-desc">Tente novamente.</p>
+        <button id="fechar-modal">Fechar</button>
+      </div>
+    </div>
+
+    <script src="assests/js/script.js"></script>
+    <script src="assests/js/modal.js"></script>
+    <script src="assests/js/toggleMenu.js"></script>
+  </body>
+</html>

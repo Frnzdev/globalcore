@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte global */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f9fb;
+  color: #4b5563; /* text-gray-800 */
+  overflow-x: hidden;
+}
+
+/* Header fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: white;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  color: black;
+}
+
+/* Container interno do header */
+header > div {
+  max-width: 96rem; /* 6xl */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+}
+
+/* Logo */
+#header img {
+  height: 100px;
+  width: 100px;
+}
+
+@media (min-width: 640px) {
+  header img {
+    height: 3rem; /* 12 */
+    width: 3rem;
+  }
+}
+
+/* Menu desktop */
+nav {
+  display: none;
+  gap: 2.5rem; /* gap-10 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    font-size: 1rem; /* sm:text-base */
+  }
+}
+
+/* Links do menu */
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #9ca3af; /* gray-400 */
+}
+
+/* Botão hamburger - visível apenas mobile */
+.md-hidden {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .md-hidden {
+    display: none;
+  }
+}
+
+/* Botão hamburger */
+#menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  outline: none;
+  font-size: 1.25rem; /* 20px */
+  padding: 0;
+}
+
+/* Menu mobile */
+#mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
+  padding: 0 1rem 1rem 1rem;
+}
+
+#mobile-menu a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+#mobile-menu a:hover {
+  color: #9ca3af; /* gray-400 */
+}
+
+@media (min-width: 768px) {
+  #mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Para mostrar o menu mobile */
+#mobile-menu.active {
+  display: flex;
+}
+
+/* Seção início */
+#inicio {
+  height: 100vh;
+  background: linear-gradient(
+    to top right,
+    black,
+    rgba(17, 24, 39, 0.56),
+    black
+  );
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Título do início */
+#inicio h1 {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+}
+
+/* Botão da seção início */
+#inicio button {
+  margin-top: 1.5rem;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem; /* rounded */
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#inicio button:hover {
+  background-color: #374151; /* gray-700 */
+  color: white;
+}
+
+/* Seção serviços */
+#servicos {
+  padding: 6rem 1rem; /* py-24 px-4 */
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+/* Título serviços */
+#servicos h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  max-width: 64rem; /* max-w-4xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Parágrafo serviços */
+#servicos p {
+  max-width: 48rem; /* max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.5rem;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  color: #d1d5db; /* gray-300 */
+}
+
+/* Cards container */
+#servicos > div {
+  max-width: 90rem; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  #servicos > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #servicos > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Cards */
+#servicos > div > div {
+  background: linear-gradient(to top right, #0072ff, #00c6ff);
+  border-radius: 1.5rem; /* rounded-3xl */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -2px rgb(0 0 0 / 0.05);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#servicos > div > div:hover {
+  transform: scale(1.05);
+}
+
+/* Diferentes gradientes para cada card */
+#servicos > div > div:nth-child(2) {
+  background: linear-gradient(to top right, #ff416c, #ff4b2b);
+}
+
+#servicos > div > div:nth-child(3) {
+  background: linear-gradient(to top right, #7928ca, #ff0080);
+}
+
+/* SVG ícones */
+#servicos svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.25rem;
+  stroke: black;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Card título */
+#servicos h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Card texto */
+#servicos p {
+  font-size: 0.875rem;
+}
+
+/* Seção sobre */
+#sobre {
+  padding: 6rem 1.5rem;
+  background-color: black;
+  text-align: center;
+  color: #d1d5db; /* gray-300 */
+}
+
+/* Título sobre */
+#sobre h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+/* Parágrafo sobre */
+#sobre p {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #9ca3af; /* gray-400 */
+  margin-bottom: 4rem;
+}
+
+/* Cards da equipe */
+#sobre > div {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  #sobre > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #sobre > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Cartões da equipe */
+#sobre > div > div {
+  background-color: #1f2937; /* gray-900 */
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -2px rgb(0 0 0 / 0.05);
+  padding: 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Imagens da equipe */
+#sobre img {
+  width: 12rem;
+  height: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.375rem;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2);
+}
+
+/* Título dos cards da equipe */
+#sobre h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtítulo dos cards da equipe */
+#sobre p.font-medium {
+  font-weight: 500;
+  color: #93c5fd;
+  margin-bottom: 0.25rem;
+}
+
+/* Texto dos cards da equipe */
+#sobre p:not(.font-medium) {
+  color: #9ca3af;
+}
+
+/* Seção contato */
+#contato {
+  padding: 6rem 1.5rem;
+  background-color: black;
+  text-align: center;
+  color: #d1d5db;
+}
+
+/* Título contato */
+#contato h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+/* Grid do contato */
+#contato > div {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  #contato > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Formulário */
+form {
+  background-color: #1f2937;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -2px rgb(0 0 0 / 0.05);
+  width: 100%;
+}
+
+/* Inputs e textarea */
+input,
+textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #374151;
+  background-color: black;
+  color: white;
+  border-radius: 0.375rem;
+  outline: none;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 600;
+  color: white;
+  font-size: 0.875rem;
+}
+
+/* Botão enviar */
+button[type="submit"] {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+/* Área lateral de contato */
+#contato > div > div:nth-child(2) {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+#contato h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#contato p {
+  color: #9ca3af;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+#contato div.mt-6 p {
+  color: #d1d5db;
+  margin-top: 0.5rem;
+}
+
+/* Modal de erro */
+#modal-unsucess {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+#modal-unsucess.active {
+  display: flex;
+}
+
+#modal-unsucess > div {
+  background-color: #1f2937;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+  padding: 2rem;
+  max-width: 24rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#modal-unsucess h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#modal-unsucess p {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+#modal-unsucess button {
+  background-color: #2563eb;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#modal-unsucess button:hover {
+  background-color: #1e40af;
+}
