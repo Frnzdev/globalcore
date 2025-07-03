@@ -11,7 +11,7 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: #f4f9fb;
-  color: #4b5563; /* text-gray-800 */
+  color: white;
   overflow-x: hidden;
 }
 
@@ -374,38 +374,21 @@ nav a:hover {
 
 /*seção de projetos da empresa*/
 #projeto {
-  padding: 6rem 1.5rem;
   background-color: black;
+  padding: 6rem 1.5rem;
   text-align: center;
-  color: #d1d5db;
 }
-
-#projeto h2 {
-  font-size: 2.25rem;
+.portH2 {
+  padding-bottom: 40px;
+  font-size: 2.25rem; /* text-4xl */
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: white;
 }
-
-#projeto p {
-  font-size: 1.125rem;
-  margin-bottom: 3rem;
-  color: #9ca3af;
-  max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Card do projeto */
-#projeto {
-  background-color: black;
-  padding: 6rem 1.5rem;
-  text-align: center;
-}
-
 .projeto-card {
-  background-color: #1e293b; /* slate-800 */
   border-radius: 1rem;
+  border: 1px solid #374151;
+  box-shadow: 29px 18px 59px -6px rgba(255, 255, 255, 0.51);
+  -webkit-box-shadow: 29px 18px 59px -6px rgba(255, 255, 255, 0.51);
+  -moz-box-shadow: 29px 18px 59px -6px rgba(255, 255, 255, 0.51); 
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -420,6 +403,7 @@ nav a:hover {
   width: 100%;
   height: auto;
   object-fit: contain;
+  object-position: center;
   background-color: #0f172a;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -467,18 +451,25 @@ nav a:hover {
 @media (min-width: 768px) {
   .projeto-card {
     flex-direction: row;
+    height: auto;
+    align-items: stretch; /* força os dois lados a terem mesma altura */
   }
 
   .projeto-card img {
     width: 50%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     border-top-right-radius: 0;
     border-bottom-left-radius: 1rem;
   }
 
   .projeto-conteudo {
     width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
