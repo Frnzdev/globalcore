@@ -372,6 +372,116 @@ nav a:hover {
   color: #9ca3af;
 }
 
+/*seção de projetos da empresa*/
+#projeto {
+  padding: 6rem 1.5rem;
+  background-color: black;
+  text-align: center;
+  color: #d1d5db;
+}
+
+#projeto h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+#projeto p {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  color: #9ca3af;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card do projeto */
+#projeto {
+  background-color: black;
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.projeto-card {
+  background-color: #1e293b; /* slate-800 */
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 72rem;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Imagem do card - mobile */
+.projeto-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #0f172a;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* Conteúdo do card */
+.projeto-conteudo {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.projeto-conteudo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.projeto-conteudo p {
+  font-size: 1rem;
+  color: #cbd5e1; /* slate-300 */
+  line-height: 1.6;
+}
+
+.btn-ver-mais {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.btn-ver-mais:hover {
+  background-color: #1e40af;
+}
+
+/* Layout desktop (responsivo) */
+@media (min-width: 768px) {
+  .projeto-card {
+    flex-direction: row;
+  }
+
+  .projeto-card img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .projeto-conteudo {
+    width: 50%;
+  }
+}
+
 /* Seção contato */
 #contato {
   padding: 6rem 1.5rem;
